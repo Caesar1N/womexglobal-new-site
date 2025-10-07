@@ -1,0 +1,841 @@
+{
+    "manifest_version": "1.0.21",
+    "title": "Konfero \u2013 Conference & Event Elementor Template Kit",
+    "page_builder": "elementor",
+    "kit_version": "1.0.0",
+    "templates": [
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/global-kit-styles.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": null,
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Home",
+            "screenshot": "screenshots\/home.jpg",
+            "source": "templates\/home.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/home\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-home",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "About Us",
+            "screenshot": "screenshots\/about-us.jpg",
+            "source": "templates\/about-us.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/about-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Schedules",
+            "screenshot": "screenshots\/schedules.jpg",
+            "source": "templates\/schedules.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/schedules\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Speakers",
+            "screenshot": "screenshots\/speakers.jpg",
+            "source": "templates\/speakers.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/speakers\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Pricing",
+            "screenshot": "screenshots\/pricing.jpg",
+            "source": "templates\/pricing.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/pricing\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "FAQ",
+            "screenshot": "screenshots\/faq.jpg",
+            "source": "templates\/faq.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/faq\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Blog",
+            "screenshot": "screenshots\/blog.jpg",
+            "source": "templates\/blog.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/blog\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Single Post",
+            "screenshot": "screenshots\/single-post.jpg",
+            "source": "templates\/single-post.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/single-post\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-post",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "MetFrom - Contact",
+            "screenshot": "screenshots\/metfrom-contact.jpg",
+            "source": "templates\/metfrom-contact.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/metfrom-contact\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact",
+            "screenshot": "screenshots\/contact.jpg",
+            "source": "templates\/contact.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/contact\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Header",
+            "screenshot": "screenshots\/header.jpg",
+            "source": "templates\/header.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/header\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-header",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Footer",
+            "screenshot": "screenshots\/footer.jpg",
+            "source": "templates\/footer.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/footer\/",
+            "type": "section",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-footer",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "404 Page",
+            "screenshot": "screenshots\/404-page.jpg",
+            "source": "templates\/404-page.json",
+            "preview_url": "https:\/\/templatekit.jegtheme.com\/konfero\/template-kit\/404-page\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-404",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "Elementor",
+            "version": "3.16.4",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        },
+        {
+            "name": "Jeg Elementor Kit",
+            "version": "2.6.1",
+            "file": "jeg-elementor-kit\/jeg-elementor-kit.php",
+            "author": "Jegtheme"
+        },
+        {
+            "name": "MetForm",
+            "version": "3.2.3",
+            "file": "metform\/metform.php",
+            "author": "Wpmet"
+        }
+    ],
+    "images": [
+        {
+            "filename": "vision.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/vision.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 10853,
+            "dimensions": [
+                778,
+                364
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/www.logotouse.com\/logo\/recOKgX0WSpj7FWf4"
+        },
+        {
+            "filename": "chain.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/chain.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 4087,
+            "dimensions": [
+                389,
+                182
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/www.logotouse.com\/logo\/recBNuP2Zdb7SJsBN"
+        },
+        {
+            "filename": "Hues.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/Hues.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 9072,
+            "dimensions": [
+                778,
+                365
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/www.logotouse.com\/logo\/recJkjxWtgkuqDc35"
+        },
+        {
+            "filename": "flash.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/flash.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 3064,
+            "dimensions": [
+                389,
+                182
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/www.logotouse.com\/logo\/recnqao3GVGpvveqa"
+        },
+        {
+            "filename": "uturn.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/uturn.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 2935,
+            "dimensions": [
+                389,
+                182
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/www.logotouse.com\/logo\/recVcjWQbZ3xBpK9a"
+        },
+        {
+            "filename": "female-speaker-talking-on-a-business-conference-at-convention-center--e1694750530152.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/female-speaker-talking-on-a-business-conference-at-convention-center--e1694750530152-800x1067.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 147929,
+            "dimensions": [
+                960,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-9MG98EF"
+        },
+        {
+            "filename": "female-speaker-talking-on-a-business-9MG98EF.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/female-speaker-talking-on-a-business-9MG98EF-800x972.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 336322,
+            "dimensions": [
+                976,
+                1186
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-9MG98EF"
+        },
+        {
+            "filename": "congratulations-on-a-great-speech--e1694659533819.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/congratulations-on-a-great-speech--e1694659533819-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 315296,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-D9GLTSS"
+        },
+        {
+            "filename": "konfero-icon-connection.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/konfero-icon-connection.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 15179,
+            "dimensions": [
+                200,
+                200
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-R93G24F"
+        },
+        {
+            "filename": "konfero-icon-speakers-R93G24F.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/konfero-icon-speakers-R93G24F.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 11705,
+            "dimensions": [
+                200,
+                200
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-R93G24F"
+        },
+        {
+            "filename": "young-asian-businesswoman-SK3Z6SD.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/young-asian-businesswoman-SK3Z6SD-800x1025.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/speakers.json",
+                    "name": "Speakers"
+                }
+            ],
+            "filesize": 275763,
+            "dimensions": [
+                908,
+                1163
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-SK3Z6SD"
+        },
+        {
+            "filename": "young-casual-businessman-holding-tablet-1-8VLWW7.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/young-casual-businessman-holding-tablet-1-8VLWW7-800x1025.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/speakers.json",
+                    "name": "Speakers"
+                }
+            ],
+            "filesize": 277111,
+            "dimensions": [
+                908,
+                1163
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-8VLWW7L"
+        },
+        {
+            "filename": "startup-team-manager-woman-ceo-V9BMGPQ.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/startup-team-manager-woman-ceo-V9BMGPQ-800x1025.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/speakers.json",
+                    "name": "Speakers"
+                }
+            ],
+            "filesize": 250841,
+            "dimensions": [
+                908,
+                1163
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-V9BMGPQ"
+        },
+        {
+            "filename": "handsome-young-businessman-looking-at-camera-YD2DRPW.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/handsome-young-businessman-looking-at-camera-YD2DRPW-800x1025.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/speakers.json",
+                    "name": "Speakers"
+                }
+            ],
+            "filesize": 191096,
+            "dimensions": [
+                908,
+                1163
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-YD2DRPW"
+        },
+        {
+            "filename": "businesswoman-looking-at-camera-while-standing-by-2.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/businesswoman-looking-at-camera-while-standing-by-2-800x1025.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/speakers.json",
+                    "name": "Speakers"
+                }
+            ],
+            "filesize": 217174,
+            "dimensions": [
+                908,
+                1163
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-R4MDVMA"
+        },
+        {
+            "filename": "young-asian-businesswoman-looking-at-camera-HKGJN28.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/young-asian-businesswoman-looking-at-camera-HKGJN28-800x1025.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/speakers.json",
+                    "name": "Speakers"
+                }
+            ],
+            "filesize": 351086,
+            "dimensions": [
+                908,
+                1163
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-HKGJN28"
+        },
+        {
+            "filename": "happy-businessmen-greeting-while-attending-an-education-event-at-conference-hall--e1694673006317.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/happy-businessmen-greeting-while-attending-an-education-event-at-conference-hall--e1694673006317-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/schedules.json",
+                    "name": "Schedules"
+                },
+                {
+                    "source": "templates\/contact.json",
+                    "name": "Contact"
+                }
+            ],
+            "filesize": 322591,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-34XJ4NZ"
+        },
+        {
+            "filename": "cinematic-image-of-a-conference-meeting--e1694675182394.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/cinematic-image-of-a-conference-meeting--e1694675182394-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/schedules.json",
+                    "name": "Schedules"
+                }
+            ],
+            "filesize": 379049,
+            "dimensions": [
+                1920,
+                1277
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-CQ8SDEW"
+        },
+        {
+            "filename": "happy-businesswoman-attending-a-conference-in-convention-center-and-looking-at-camera--e1694675579478.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/happy-businesswoman-attending-a-conference-in-convention-center-and-looking-at-camera--e1694675579478-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/schedules.json",
+                    "name": "Schedules"
+                }
+            ],
+            "filesize": 322347,
+            "dimensions": [
+                1920,
+                1280
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-BXA5N62"
+        },
+        {
+            "filename": "smiling-confident-latin-woman-looking-at-camera-e1694677504142.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/smiling-confident-latin-woman-looking-at-camera-e1694677448922-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/schedules.json",
+                    "name": "Schedules"
+                }
+            ],
+            "filesize": 98903,
+            "dimensions": [
+                648,
+                648
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-H4SPMF3"
+        },
+        {
+            "filename": "cheerful-young-african-american-businessman-with-smartphone-e1694678862548.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/cheerful-young-african-american-businessman-with-smartphone-e1694678829517-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/schedules.json",
+                    "name": "Schedules"
+                },
+                {
+                    "source": "templates\/single-post.json",
+                    "name": "Single Post"
+                }
+            ],
+            "filesize": 73867,
+            "dimensions": [
+                619,
+                619
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-S6YXGSH"
+        },
+        {
+            "filename": "business-woman-standing-outside-the-office-building-e1694679276375.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/business-woman-standing-outside-the-office-building-e1694679222508-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/schedules.json",
+                    "name": "Schedules"
+                }
+            ],
+            "filesize": 95681,
+            "dimensions": [
+                648,
+                648
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-8DSNDV8"
+        },
+        {
+            "filename": "cinematic-image-of-a-conference-meeting-1-1-e1694680895947.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/cinematic-image-of-a-conference-meeting-1-1-e1694680895947-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/speakers.json",
+                    "name": "Speakers"
+                }
+            ],
+            "filesize": 315123,
+            "dimensions": [
+                1920,
+                1277
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-MXPVZ2Z"
+        },
+        {
+            "filename": "cinematic-image-of-a-conference-meeting-1-3-e1695268174241.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/cinematic-image-of-a-conference-meeting-1-3-e1695268174241-800x450.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 260349,
+            "dimensions": [
+                1920,
+                1080
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-2V8GRCS"
+        },
+        {
+            "filename": "cinematic-image-of-a-conference-meeting-1-6-e1695089497413.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/cinematic-image-of-a-conference-meeting-1-6-e1695089497413-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/schedules.json",
+                    "name": "Schedules"
+                },
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                }
+            ],
+            "filesize": 307334,
+            "dimensions": [
+                1920,
+                1277
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-PWTAE52"
+        },
+        {
+            "filename": "smiling-confident-latin-woman-looking-at-camera-e1686708431556.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/smiling-confident-latin-woman-looking-at-camera-e1686708431556.jpg",
+            "templates": [
+                {
+                    "source": "templates\/single-post.json",
+                    "name": "Single Post"
+                }
+            ],
+            "filesize": 77611,
+            "dimensions": [
+                630,
+                630
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-H4SPMF3"
+        },
+        {
+            "filename": "cinematic-image-of-a-conference-meeting-1-4-e1694985535274.jpg",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/cinematic-image-of-a-conference-meeting-1-4-e1694985535274-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/single-post.json",
+                    "name": "Single Post"
+                }
+            ],
+            "filesize": 298926,
+            "dimensions": [
+                1920,
+                1277
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-5LVTAHB"
+        },
+        {
+            "filename": "konfero-logo-primary.png",
+            "thumbnail_url": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/konfero-logo-primary.png",
+            "templates": [
+                {
+                    "source": "templates\/contact.json",
+                    "name": "Contact"
+                },
+                {
+                    "source": "templates\/header.json",
+                    "name": "Header"
+                },
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                }
+            ],
+            "filesize": 12156,
+            "dimensions": [
+                606,
+                129
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/templatekit.jegtheme.com\/konfero\/wp-content\/uploads\/sites\/412\/2023\/09\/konfero-logo-primary.png"
+        }
+    ]
+}

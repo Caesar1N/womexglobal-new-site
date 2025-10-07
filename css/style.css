@@ -1,0 +1,919 @@
+/* ======================= GLOBAL STYLES ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0C011E;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ======================= REUSABLE COMPONENTS ======================= */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #A855F7;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #9333ea;
+}
+
+.btn-secondary {
+    background-color: #A855F7;
+    color: #ffffff;
+    padding: 8px 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #9333ea;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1rem;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #A855F7;
+    border-color: #A855F7;
+}
+
+.btn-outline:hover {
+    background-color: #A855F7;
+    color: #ffffff;
+}
+
+/* ======================= HEADER ======================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul a {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul a:hover {
+    color: #A855F7;
+}
+
+header .btn {
+    margin-left: 30px;
+}
+
+
+/* ======================= HERO SECTION ======================= */
+#hero {
+    position: relative;
+    background-image: linear-gradient(rgba(12, 1, 30, 0.7), rgba(12, 1, 30, 0.7)), url('../images/2025/04/congratulations-on-a-great-speech-e1694659533819.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 15vh 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#hero .hero-content {
+    text-align: left;
+    width: 100%;
+}
+
+#hero .presenter {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.hero-highlight {
+    color: #34D399;
+}
+
+.hero-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #3B82F6;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-out;
+}
+
+#hero h1:hover .hero-underline::after {
+    transform: scaleX(1);
+}
+
+#hero .sponsors-block {
+    margin-top: 50px;
+}
+
+#hero .sponsors-block h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#hero .sponsor-logos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#hero .sponsor-logos img {
+    max-height: 80px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#hero .sponsor-logos img:hover {
+    opacity: 1;
+}
+
+.event-info {
+    position: absolute;
+    bottom: 30px;
+    right: 5%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.event-info p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* ======================= COUNTDOWN SECTION ======================= */
+#countdown {
+    padding: 60px 5%;
+    background-color: #11052C; /* A slightly lighter purple shade */
+    text-align: center;
+}
+
+#countdown h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background-color: #A855F7;
+    padding: 20px 30px;
+    border-radius: 10px;
+    min-width: 120px;
+    color: #ffffff;
+}
+
+.time-box span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* ======================= LIGHT BACKGROUND SECTIONS ======================= */
+#about, #speakers, #faq {
+    background-color: #f7f5ff;
+    color: #0C011E;
+    padding: 100px 5%;
+}
+
+/* Common heading styles for light sections */
+#about h2, #about h3,
+#speakers h2,
+#faq h2, #faq .question {
+    color: #0C011E;
+}
+
+/* ======================= ABOUT SECTION ======================= */
+#about {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.heading-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.heading-with-icon img {
+    height: 50px;
+    width: 50px;
+}
+
+/* ======================= SPEAKERS SECTION ======================= */
+#speakers {
+    text-align: center;
+}
+
+#speakers > p:first-of-type {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #A855F7;
+}
+
+#speakers h2 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.speaker-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.speaker-card {
+    background-color: #0C011E;
+    color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* ADD THIS LINE */
+}
+
+.speaker-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ======================= SPEAKER CARD TEXT REFINEMENTS ======================= */
+
+/* This rule now correctly positions the text block at the top */
+.speaker-info {
+    padding: 25px;
+    text-align: left; /* Aligns the text to the left as per the original design */
+    /* The 'margin-top: auto;' is now removed */
+}
+
+/* This rule styles the name and title */
+.speaker-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #A855F7; /* This sets the name color to purple */
+}
+
+.speaker-info p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.4; /* Improves readability for multi-line titles */
+}
+/* .speaker-info {
+    padding: 25px;
+    margin-top: auto;
+} */
+
+/* (Speaker card hover effect styles are unchanged) */
+.speaker-image-container { position: relative; }
+.social-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: flex-end; gap: 15px; padding-bottom: 20px; background: rgba(12, 1, 30, 0.6); opacity: 0; transition: opacity 0.3s ease-in-out; }
+.speaker-image-container:hover .social-overlay { opacity: 1; }
+.social-icon { display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; background-color: #34D399; color: #ffffff; border-radius: 50%; font-size: 1.1rem; transform: translateY(-20px); transition: all 0.3s ease-in-out; }
+.speaker-image-container:hover .social-icon { transform: translateY(0); }
+.social-icon:hover { background-color: #A855F7; transform: scale(1.1); }
+.social-icon:nth-child(2) { transition-delay: 0.1s; }
+.social-icon:nth-child(3) { transition-delay: 0.2s; }
+
+/* ======================= SCHEDULE SECTION ======================= */
+#schedule {
+    padding: 100px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#schedule h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+.schedule-day {
+    background-color: #0C011E;
+    color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Find and replace this rule in your main CSS (not in the media query) */
+.schedule-image {
+    flex-shrink: 0;
+    width: 280px;
+    background-size: cover; /* This is the key property that prevents stretching */
+    background-position: center;
+}
+
+#day-one-img { background-image: url('../images/2025/04/1113.jpg'); }
+#day-two-img { background-image: url('../images/2025/04/24337.jpg'); }
+#day-three-img { background-image: url('../images/2025/04/44046.jpg'); }
+
+.schedule-content {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.schedule-meta {
+    display: flex;
+    gap: 25px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.schedule-meta i {
+    color: #34D399;
+    margin-right: 8px;
+}
+
+.schedule-content h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.schedule-content ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-content ul li:last-child {
+    border-bottom: none;
+}
+
+.schedule-content .btn {
+    margin-top: 25px;
+    align-self: flex-start; /* ADD THIS LINE */
+}
+
+#schedule > .btn {
+    margin-top: 20px;
+}
+
+/* ======================= CTA SECTION STYLES ======================= */
+
+#cta {
+    position: relative; /* Crucial for positioning .cta-background and .cta-content */
+    display: flex; /* We'll use flex to position the content */
+    align-items: flex-end; /* Sticks content to the bottom */
+    justify-content: flex-start; /* Sticks content to the left */
+    min-height: 80vh; /* Make the section taller to see the bottom alignment */
+    padding: 0 5% 50px 5%; /* Adjusted padding: no top/bottom padding here, add to cta-content */
+    overflow: hidden; /* Ensures image and content stay within bounds */
+
+    /* Light overlay directly on the section */
+    background-color: rgba(12, 1, 30, 0.4); /* Lighter, less purple overlay */
+}
+
+.cta-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/2025/04/cinematic-image-of-a-conference-meeting-1-1-e1694680895947.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep parallax */
+    filter: brightness(1.2); /* Make the image brighter */
+    z-index: -1; /* Puts the background behind the content */
+}
+
+/* --- The glass card (cta-content) --- */
+.cta-content {
+    /* The "Glassmorphism" effect */
+    background: rgba(255, 255, 255, 0.05); /* Very transparent background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    padding: 40px;
+    max-width: 600px; /* Constrain the width of the card */
+    text-align: left; /* Align the text inside the card to the left */
+    
+    position: relative; /* Important for z-index, but might not be strictly needed here */
+    z-index: 1; /* Ensures the content is above the background */
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure heading is white */
+}
+
+.cta-content p {
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* ======================= FAQ SECTION STYLES ======================= */
+
+#faq h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* This is the container we added to center the whole list */
+.faq-container {
+    max-width: 800px; /* Constrains the width of the FAQ list */
+    margin: 0 auto;   /* Centers the container on the page */
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 18px 0;
+}
+
+.faq-item summary { /* We can style the summary tag directly */
+    font-weight: 600; /* Bolder question text */
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; /* Hides the default browser marker */
+}
+
+/* This removes the default marker in Chrome/Safari */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* This is our new, clean CSS chevron arrow */
+.faq-item summary::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid #555; /* Dark gray border */
+    border-right: 2px solid #555;
+    transform: rotate(45deg); /* Rotates the shape to point down */
+    transition: transform 0.3s ease-out;
+}
+
+/* This rule targets the arrow when the details element is open */
+.faq-item[open] > summary::after {
+    transform: rotate(225deg); /* Rotates the shape to point up */
+}
+
+.faq-item .answer {
+    padding-top: 15px;
+    line-height: 1.7;
+    color: #555; /* A slightly lighter color for the answer text */
+}
+
+/* ======================= ABOUT SECTION REFINEMENTS ======================= */
+.about-btn-container {
+    text-align: center; /* This will center the button inside the container */
+    margin-top: 40px;   /* This adds plenty of space from the text above */
+}
+
+/* ======================= FOOTER STYLES (FINAL POLISHED VERSION) ======================= */
+
+footer {
+    background: radial-gradient(circle at 20% 100%, rgba(168, 85, 247, 0.2), transparent 30%), #0C011E;
+    padding: 60px 5% 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- Helper Class to Center Each Footer Row --- */
+.footer-row-container {
+    width: 100%;
+    max-width: 1100px;  /* This constrains the width of the content */
+    margin: 0 auto;     /* This centers the container on the page */
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* --- Top Row: About & Subscribe --- */
+.footer-content {
+    align-items: center;
+    justify-content: center; /* Groups the items in the center */
+    gap: 100px;             /* Creates a large, defined space between items */
+}
+
+.footer-about {
+    flex-basis: 350px;
+    text-align: left;
+}
+.footer-about img { height: 50px; margin-bottom: 15px; }
+
+.footer-subscribe {
+    flex-basis: 400px;
+    text-align: left;
+}
+.footer-subscribe h3 { font-weight: 600; margin-bottom: 15px; color: #ffffff; }
+.footer-subscribe form { display: flex; }
+.footer-subscribe input { width: 100%; padding: 12px 15px; border: none; border-radius: 50px 0 0 50px; outline: none; color: #333; }
+.footer-subscribe .btn { border-radius: 0 50px 50px 0; }
+
+/* --- Middle Row: Link Columns --- */
+.footer-links {
+    align-items: flex-start;
+    justify-content: center; /* Groups the columns in the center */
+    gap: 80px;              /* Creates generous space between columns */
+}
+
+.links-column {
+    min-width: 180px;
+    text-align: left;
+}
+.links-column h4 { color: #ffffff; font-weight: 600; margin-bottom: 20px; }
+.links-column ul li { margin-bottom: 12px; }
+.links-column a:hover { color: #A855F7; }
+
+/* --- Footer Contact Items --- */
+.contact-item { display: flex; align-items: center; margin-bottom: 20px; }
+.contact-icon { display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; background-color: #11052C; border-radius: 10px; margin-right: 15px; color: #34D399; font-size: 1.2rem; }
+.contact-text { display: flex; flex-direction: column; text-align: left; }
+.contact-text span { font-size: 0.9rem; opacity: 0.7; margin-bottom: 2px; }
+.contact-text a { color: #ffffff; font-weight: 500; }
+.contact-text a:hover { color: #A855F7; }
+
+/* --- Bottom Row: Copyright --- */
+.footer-bottom {
+    border-bottom: none;
+    padding-top: 30px;
+    padding-bottom: 0;
+    justify-content: space-between; /* Pushes the two items apart */
+    align-items: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ======================= RESPONSIVE STYLES (TABLET & MOBILE) (CORRECTED) ======================= */
+/* This should be outside and before your @media query */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ADD THIS RULE */
+.menu-toggle-btn {
+    display: none; /* This hides the hamburger on desktop by default */
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+
+    /* 1. Hide the desktop navigation menu links by default */
+    header nav ul {
+        display: none;
+    }
+
+    /* 2. Show the hamburger menu button */
+    .menu-toggle-btn {
+        display: block;
+    }
+
+    /* --- This is the new, corrected logic for the dropdown menu --- */
+    
+    /* Style the nav container itself for when it becomes the dropdown */
+    header nav {
+        display: block; /* Make sure the container is visible */
+        position: absolute;
+        top: 70px; /* Position it just below the header (adjust if your header height changed) */
+        left: 0;
+        width: 100%;
+        background-color: #0C011E;
+        z-index: 100; /* Ensure it appears on top of other content */
+
+        /* By default, the menu is hidden off-screen */
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s;
+    }
+
+    /* When JavaScript adds the .menu-open class, slide it into view */
+    header nav.menu-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Re-style the UL to be a vertical list inside the dropdown */
+    header nav.menu-open ul {
+        display: flex; /* Turn it back on */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    header nav.menu-open ul li {
+        width: 100%;
+    }
+    
+    header nav.menu-open ul a {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    #hero {
+    height: auto; /* Allows the section to grow with its content */
+    padding: 120px 5% 80px; /* Use padding for spacing instead of fixed height */
+    }
+
+    #hero h1 {
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+        max-width: 600px;
+    }
+
+    #hero .sponsors-block {
+        margin-top: 40px;
+    }
+
+    .event-info {
+        position: static; /* Un-stick the event box */
+        transform: none;
+        margin: 40px auto 0; /* Center it with a top margin */
+        text-align: left;
+    }
+
+    /* --- Responsive About Section --- */
+    #about {
+        flex-direction: column; /* Stack the image and text vertically */
+        text-align: center; /* Center-align the text */
+    }
+
+    .about-content {
+        text-align: left; /* Keep paragraphs left-aligned for readability */
+    }
+
+    .about-btn-container {
+        text-align: center; /* Re-center the button in the new layout */
+    }
+
+
+    /* --- Responsive Speakers Section --- */
+    .speaker-grid {
+        gap: 20px; /* Reduce the gap between cards on smaller screens */
+    }
+
+
+    /* --- Responsive Schedule Section --- */
+    .schedule-day {
+        flex-direction: column; /* Stack the image and content vertically */
+    }
+
+    .schedule-image {
+        width: 100%; /* Make the image full-width of the card */
+        height: 200px; /* Give it a fixed height */
+    }
+
+
+    /* --- Responsive CTA Section --- */
+    #cta {
+        justify-content: center; /* Center the glass card */
+        text-align: center; /* Center the text inside the card */
+    }
+
+    .cta-content {
+        text-align: left; /* Keep paragraphs left-aligned */
+    }
+
+    /* --- Responsive Footer --- */
+    .footer-content, .footer-links {
+        justify-content: center; /* Center the columns */
+        text-align: center;
+    }
+
+    .links-column, .footer-about, .footer-subscribe {
+        text-align: left; /* Ensure text within columns remains left-aligned */
+        min-width: 220px; /* Give columns a bit more space */
+    }
+}
+
+/* ======================= RESPONSIVE STYLES (MOBILE) ======================= */
+
+@media (max-width: 768px) {
+
+    /* --- General Adjustments --- */
+    body {
+        font-size: 14px; /* Slightly reduce the base font size on mobile */
+    }
+    
+    /* --- Mobile Header --- */
+    header {
+        padding: 12px 3%;
+    }
+
+    /* --- Mobile Hero Section --- */
+    #hero {
+        padding: 80px 5% 60px; /* Adjust padding */
+    }
+
+    #hero h1 {
+        font-size: 1.8rem; /* Further reduce heading size for phones */
+    }
+
+    #hero .sponsors-block {
+        align-items: center; /* Center the logos when they stack */
+    }
+
+    #hero .sponsor-logos {
+        justify-content: center; /* Center the group of logos */
+        flex-wrap: wrap; /* ADD THIS LINE */
+    }
+
+
+    /* --- Mobile About, Speakers, CTA Sections --- */
+    #about, #speakers, #cta {
+        padding: 60px 5%;
+    }
+    
+    #about h2, #speakers h2, #cta h2 {
+        font-size: 2rem; /* Reduce section heading sizes */
+    }
+
+    /* --- Mobile Schedule Section --- */
+    #schedule {
+        padding: 60px 5%;
+    }
+    #schedule h2 {
+        font-size: 2rem;
+    }
+    .schedule-day {
+        /* On mobile, let's make the cards a bit simpler */
+        max-width: 100%;
+    }
+    
+    /* --- Mobile FAQ Section --- */
+    #faq {
+        padding: 60px 8%;
+    }
+    
+    /* --- Mobile Footer --- */
+    .footer-content, .footer-links {
+        flex-direction: column; /* Stack the columns vertically */
+        align-items: center; /* Center-align the stacked columns */
+        text-align: center;
+        gap: 40px;
+    }
+    .links-column, .footer-about, .footer-subscribe {
+        text-align: center; /* Center text inside columns */
+    }
+    .footer-subscribe form {
+        justify-content: center; /* Center the form elements */
+    }
+    .footer-bottom {
+        flex-direction: column; /* Stack copyright and brand name */
+        gap: 10px;
+    }
+}
+
+/* ======================= SWIPER STYLES OVERRIDE ======================= */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #A855F7 !important; /* Make arrows purple */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #A855F7 !important; /* Make active dot purple */
+
+}
+
+/* ======================= SPONSOR CAROUSEL REFINEMENTS ======================= */
+
+.sponsors-swiper .swiper-slide {
+    width: auto; /* Allows each slide to be as wide as its logo */
+}
+
+.sponsors-swiper .swiper-slide img {
+    max-height: 60px; /* Sets a consistent max height for all logos */
+    width: auto;      /* Lets the width adjust proportionally */
+}
+
+/* ======================= SPEAKER CAROUSEL REFINEMENTS ======================= */
+.speakers-swiper .swiper-slide {
+    height: auto; /* Allows slide to grow */
+}
+
+.speakers-swiper .speaker-card {
+    height: 100%; /* Forces the card to fill the entire slide height */
+}
+
+.speakers-swiper {
+    padding-bottom: 50px; /* Adds space at the bottom for the pagination dots */
+}
