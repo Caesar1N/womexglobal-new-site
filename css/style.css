@@ -125,7 +125,8 @@ header .btn {
 
 #hero .hero-content {
     text-align: left;
-    width: 100%;
+    max-width: 60%; /* This is the key fix to prevent overlap */
+    flex-shrink: 0; /* Prevents the container from shrinking if window is narrow */
 }
 
 #hero .presenter {
@@ -330,6 +331,12 @@ header .btn {
     display: flex;
     flex-direction: column;
     height: 100%; /* ADD THIS LINE */
+}
+
+.speakers-btn-container {
+    text-align: center;
+    padding-top: 2rem; /* Adds space above the button */
+    padding-bottom: 3rem; /* Adds space below the button */
 }
 
 .speaker-card:hover {
@@ -654,6 +661,1455 @@ footer {
     opacity: 0.7;
 }
 
+/* ======================= SPEAKER INTRO SECTION ======================= */
+#speaker-intro {
+    background-color: #0C011E; /* Light background */
+    color: #ffffff;           /* Dark text */
+    padding: 100px 5%;
+    overflow: hidden; /* To contain the decorative blob */
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    flex-basis: 50%;
+    max-width: 600px;
+}
+
+.intro-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* This is for the hover underline effect */
+.intro-highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.intro-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* Position the line slightly below the text */
+    left: 0;
+    width: 100%;
+    height: 4px; /* Make the line a bit thicker */
+    background-color: #34D399; /* The green color */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-out;
+}
+
+/* On h1 hover, the underline scales to 100% */
+.intro-text h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #f0f0f0;
+}
+
+.intro-image {
+    flex-basis: 40%;
+    max-width: 400px;
+    position: relative; /* Needed for the pseudo-element blob */
+}
+
+/* The decorative blob behind the image */
+.intro-image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: #A855F7; /* Purple color for the blob */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; /* Blob shape */
+    animation: morph 8s ease-in-out infinite; /* Morphing animation */
+    z-index: 1;
+    opacity: 0.2;
+}
+
+.intro-image img {
+    border-radius: 20px;
+    position: relative;
+    z-index: 2; /* Ensure image is on top of the blob */
+    width: 100%;
+}
+
+/* Animation for the morphing blob */
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+/* ======================= ALL SPEAKERS GRID PAGE (CORRECTED) ======================= */
+#all-speakers {
+    padding: 100px 5%;
+    background-color: #f7f5ff;
+}
+
+.speaker-grid-full {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px; /* Constrains the overall width of the grid */
+    margin: 0 auto;    /* Centers the grid container */
+}
+
+/* ======================= CTA BANNER ======================= */
+#cta-banner {
+    background: linear-gradient(rgba(12, 1, 30, 0.7), rgba(12, 1, 30, 0.7)), url('../images/man-with-headset.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 5%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.cta-banner-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cta-banner-content p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* ======================= PRICING SECTION (CORRECTED WITH WHITE BACKGROUND) ======================= */
+#pricing {
+    padding: 100px 5%;
+    background-color: #f7f5ff; /* Changed to the light background color */
+    text-align: center;
+    color: #0C011E; /* Set default text color for the section */
+}
+
+#pricing .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#pricing .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #0C011E; /* Ensure heading is dark */
+}
+
+#pricing .section-subtitle {
+    margin-bottom: 50px;
+    opacity: 0.8;
+    color: #555; /* Subtitle color */
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background-color: #ffffff; /* Make pricing cards white */
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #e0e0e0; /* Add a light border */
+    max-width: 350px;
+    transition: all 0.3s ease;
+    position: relative;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: #A855F7;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #0C011E; /* Dark text for headings */
+}
+
+.pricing-card .price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #A855F7;
+    margin-bottom: 30px;
+}
+
+.features-list {
+    text-align: left;
+    margin-bottom: 40px;
+    color: #555; /* Dark gray for feature text */
+}
+
+.features-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.features-list i {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.features-list .fa-check { color: #34D399; }
+.features-list .fa-times { color: #ef4444; opacity: 0.5; }
+
+.pricing-card .btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* --- Styles for the highlighted card remain largely the same --- */
+.pricing-card.highlighted {
+    background-color: #A855F7;
+    color: #ffffff; /* Text color is white */
+    transform: scale(1.05);
+    border-color: #A855F7;
+}
+
+.pricing-card.highlighted:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.pricing-card.highlighted h3 {
+    color: #ffffff; /* White heading */
+}
+
+.pricing-card.highlighted .price {
+    color: #ffffff; /* White price */
+}
+
+.pricing-card.highlighted .features-list {
+    color: rgba(255, 255, 255, 0.9); /* Lighter feature text */
+}
+
+.pricing-card.highlighted .btn {
+    background-color: #ffffff;
+    color: #A855F7;
+}
+
+.pricing-card.highlighted .btn:hover {
+    background-color: #f0f0f0;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #34D399;
+    color: #0C011E;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* ======================= SPONSOR INTRO SECTION ======================= */
+#sponsor-intro {
+    background-color: #0C011E; /* Dark background */
+    color: #ffffff;
+    padding: 100px 5%;
+    overflow: hidden;
+}
+
+#sponsor-intro .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#sponsor-intro .intro-text {
+    flex-basis: 50%;
+    max-width: 600px;
+}
+
+#sponsor-intro .intro-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* As per the screenshot */
+}
+
+/* Reusing the hover effect class from the speakers page */
+#sponsor-intro .intro-text h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+
+#sponsor-intro .intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+#sponsor-intro .intro-image {
+    flex-basis: 40%;
+    max-width: 450px;
+}
+
+#sponsor-intro .intro-image img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+
+/* ======================= SPONSORSHIP PRICING ======================= */
+#sponsorship-pricing {
+    padding: 100px 5%;
+    background-color: #f7f5ff; /* Light background */
+    text-align: center;
+}
+
+#sponsorship-pricing .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#sponsorship-pricing .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #0C011E;
+}
+
+#sponsorship-pricing .section-subtitle {
+    margin-bottom: 60px;
+    opacity: 0.8;
+    color: #555;
+}
+
+.sponsorship-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.sponsorship-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 380px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsorship-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.sponsorship-card .card-header {
+    padding: 30px;
+    color: #ffffff;
+}
+
+.sponsorship-card .card-header.platinum { background: linear-gradient(45deg, #4c51bf, #667eea); }
+.sponsorship-card .card-header.gold { background: linear-gradient(45deg, #d69e2e, #f6e05e); }
+.sponsorship-card .card-header.silver { background: linear-gradient(45deg, #9ca3af, #e5e7eb); }
+
+
+.sponsorship-card .card-header h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.sponsorship-card .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.sponsorship-card .card-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+    color: #555;
+}
+
+.sponsorship-card .card-body .features-list {
+    margin-bottom: 30px;
+}
+
+.sponsorship-card .btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* ======================= DELEGATE INTRO SECTION ======================= */
+#delegate-intro {
+    background-color: #0C011E;
+    color: #ffffff;
+    padding: 100px 5%;
+    overflow: hidden;
+}
+
+#delegate-intro .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#delegate-intro .intro-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+#delegate-intro .intro-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#delegate-intro .intro-text h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+#delegate-intro .intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.group-discounts {
+    flex: 1;
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.group-discounts h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #A855F7;
+}
+
+.group-discounts p {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.group-discounts table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.group-discounts th, .group-discounts td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.group-discounts th {
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.group-discounts tr:last-child td {
+    border-bottom: none;
+}
+
+.group-discounts .note {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* ======================= DELEGATE PRICING ======================= */
+#delegate-pricing {
+    padding: 100px 5%;
+    background-color: #f7f5ff;
+    text-align: center;
+}
+
+#delegate-pricing .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#delegate-pricing .section-title {
+    color: #0C011E;
+}
+
+#delegate-pricing .section-subtitle {
+    color: #555;
+    margin-bottom: 60px;
+}
+
+.delegate-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.delegate-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 380px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #0C011E;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delegate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.delegate-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.delegate-card .price {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #A855F7;
+    margin-bottom: 15px;
+}
+
+.delegate-card .card-description {
+    color: #555;
+    margin-bottom: 30px;
+    min-height: 60px; /* Helps align cards */
+}
+
+.delegate-card .features-list {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.delegate-card .btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* ======================= BOOTH INTRO SECTION ======================= */
+#booth-intro {
+    background-color: #0C011E;
+    color: #ffffff;
+    padding: 100px 5%;
+    overflow: hidden;
+}
+
+#booth-intro .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#booth-intro .intro-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+#booth-intro .intro-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#booth-intro .intro-text h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+#booth-intro .intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.organizer-provisions {
+    flex: 1;
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.organizer-provisions h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #A855F7;
+}
+
+.organizer-provisions ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.organizer-provisions li {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.organizer-provisions .note {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+
+/* ======================= BOOTH PRICING ======================= */
+#booth-pricing {
+    padding: 100px 5%;
+    background-color: #f7f5ff;
+    text-align: center;
+}
+
+#booth-pricing .container, #floor-plan .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#booth-pricing .section-title, #floor-plan .section-title, #contact-form-section .section-title {
+    color: #0C011E;
+}
+
+#booth-pricing .section-subtitle, #floor-plan .section-subtitle {
+    color: #555;
+    margin-bottom: 60px;
+}
+
+.booth-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.booth-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 380px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #0C011E;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booth-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.booth-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.booth-card .size {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #A855F7;
+    margin-bottom: 15px;
+}
+
+.booth-card .card-description {
+    color: #555;
+    margin-bottom: 30px;
+    min-height: 60px;
+}
+
+.booth-card .features-list {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.booth-card .btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* ======================= FLOOR PLAN CAROUSEL ======================= */
+#floor-plan {
+    padding: 100px 5% 80px; /* Add bottom padding */
+    background-color: #f7f5ff;
+    text-align: center;
+}
+
+.floor-plan-swiper .swiper-slide {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.floor-plan-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floor-plan-swiper .swiper-pagination {
+    position: static; /* Let it sit below the carousel */
+    margin-top: 2rem;
+}
+
+/* ======================= SCHEDULE INTRO SECTION ======================= */
+#schedule-intro {
+    background-color: #0C011E;
+    color: #ffffff;
+    padding: 100px 5%;
+    overflow: hidden;
+}
+
+#schedule-intro .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#schedule-intro .intro-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+#schedule-intro .intro-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+#schedule-intro .intro-text h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+#schedule-intro .intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.core-subjects {
+    flex: 1;
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.core-subjects h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #A855F7;
+}
+
+.core-subjects ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.core-subjects li {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* ======================= FULL SCHEDULE TABS ======================= */
+#full-schedule {
+    padding: 100px 5%;
+    background-color: #f7f5ff;
+    color: #0C011E;
+}
+
+#full-schedule .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.schedule-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    background-color: transparent;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.tab-btn:hover {
+    background-color: #f0e6ff;
+}
+
+.tab-btn.active {
+    background-color: #A855F7;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.4);
+}
+
+.tab-btn small {
+    font-weight: 400;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.schedule-content-panel {
+    display: none;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+.schedule-content-panel.active {
+    display: block;
+}
+
+.schedule-item {
+    display: flex;
+    padding: 25px 30px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.item-time {
+    flex-basis: 180px;
+    flex-shrink: 0;
+    font-weight: 600;
+    color: #A855F7;
+    padding-right: 20px;
+}
+
+.item-details h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.item-details p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ======================= ABOUT INTRO SECTION (REVISED LAYOUT) ======================= */
+#about-intro {
+    background-color: #0C011E;
+    color: #ffffff;
+    padding: 100px 5%;
+    overflow: hidden;
+}
+
+#about-intro .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left side heading */
+#about-intro .intro-heading {
+    flex: 1;
+    max-width: 650px;
+}
+
+#about-intro .intro-heading h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+#about-intro .intro-heading h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+/* Right side details (paragraph + stats) */
+#about-intro .intro-details {
+    flex: 1;
+    max-width: 450px;
+}
+
+#about-intro .intro-details p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+#about-intro .intro-stats {
+    display: flex;
+    gap: 50px; /* Space between the two stat items */
+}
+
+.stat-item h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #A855F7;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* ======================= INNOVATION & IMPACT SECTION ======================= */
+#innovation-impact {
+    padding: 100px 5%;
+    background-color: #0C011E;
+}
+
+.impact-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.impact-text-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.impact-card {
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.impact-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.impact-card.light {
+    background-color: #f7f5ff;
+    color: #0C011E;
+}
+
+.impact-card.dark {
+    background-color: #11052C;
+    color: #ffffff;
+}
+
+.impact-card.light h3 {
+    color: #A855F7;
+}
+
+.impact-card.dark h3 {
+    color: #34D399; /* Green for contrast */
+}
+
+.impact-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.impact-card ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.impact-card ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #34D399; /* Green tick */
+    font-weight: bold;
+}
+
+.impact-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+.impact-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.impact-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* ======================= BLOG INTRO SECTION ======================= */
+#blog-intro {
+    background-color: #0C011E;
+    color: #ffffff;
+    padding: 100px 5%;
+}
+
+#blog-intro .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#blog-intro .intro-text {
+    flex: 1;
+}
+
+#blog-intro .intro-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+#blog-intro .intro-text h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+.newsletter-signup {
+    flex: 1;
+    max-width: 500px;
+}
+
+.newsletter-signup p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    border-radius: 50px;
+    background-color: #ffffff;
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.subscribe-form input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #0C011E;
+    outline: none;
+}
+
+.subscribe-form .btn {
+    flex-shrink: 0;
+}
+
+
+/* ======================= BLOG GRID SECTION ======================= */
+#blog-grid-section {
+    padding: 100px 5%;
+    background-color: #f7f5ff;
+}
+
+.blog-grid {
+    display: grid;
+    /* This creates responsive columns that are at least 350px wide */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-post-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-card .card-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-post-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.blog-post-card .card-content {
+    padding: 25px;
+    color: #0C011E;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Makes the card content fill the available space */
+}
+
+.post-meta {
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.post-meta a {
+    color: #A855F7;
+    font-weight: 600;
+}
+
+.post-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.post-title a {
+    color: #0C011E;
+}
+.post-title a:hover {
+    color: #A855F7;
+}
+
+.post-excerpt {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    font-weight: 600;
+    color: #A855F7;
+    margin-top: auto; /* This pushes the link to the bottom */
+}
+
+/* ======================= CONTACT INTRO SECTION (REVISED LAYOUT & COLORS) ======================= */
+#contact-intro {
+    background-color: #0C011E;
+    color: #ffffff;
+    padding: 100px 5%;
+}
+
+#contact-intro .intro-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+#contact-intro .intro-heading {
+    flex: 1;
+}
+
+#contact-intro .intro-heading h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+
+#contact-intro .intro-heading h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+/* This is now the LIGHT box */
+.help-box {
+    background-color: #f7f5ff;
+    color: #0C011E;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.help-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #A855F7;
+}
+
+.help-box p {
+    color: #555; /* Set dark text color for the paragraph */
+}
+
+#contact-intro .intro-quote {
+    flex: 1;
+    max-width: 450px;
+}
+
+/* This is now the DARK box */
+.quote-box {
+    background-color: #11052C;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.quote-box p {
+    font-style: italic;
+    color: #ffffff; /* Ensure text is white */
+    opacity: 0.9;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.quote-box img {
+    height: 30px;
+    opacity: 0.8; /* Slightly increase opacity on dark background */
+}
+
+/* ======================= CONTACT DETAILS SECTION ======================= */
+#contact-details {
+    padding: 100px 5%;
+    background-color: #f7f5ff;
+}
+
+#contact-details .container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: -120px auto 0; /* Negative margin to pull it up */
+    position: relative;
+    z-index: 3;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 380px;
+}
+
+.contact-icon-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e6f7f2;
+    color: #34D399;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon-wrapper {
+    background-color: #f3e8ff;
+    color: #A855F7;
+    transform: translateY(-5px);
+}
+
+.contact-card h3 {
+    color: #0C011E;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-card p, .contact-card a {
+    color: #555;
+    line-height: 1.7;
+    display: block;
+}
+
+.contact-card a:hover {
+    color: #A855F7;
+}
+
+/* ======================= MAP SECTION ======================= */
+#map-section {
+    line-height: 0;
+}
+#map-section iframe {
+    width: 100%;
+    height: 550px; /* Increased height */
+    border: 0;
+    display: block; /* Prevents extra space */
+}
+
+/* ======================= CONTACT FORM SECTION (FINAL FIX) ======================= */
+#contact-form-section {
+    padding: 100px 5%;
+    background-color: #f7f5ff;
+}
+
+#contact-form-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+#contact-form-section .section-title {
+    text-align: center;
+    color: #0C011E;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #0C011E;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block; /* Ensures label takes its own line */
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    height: 48px; /* *** THIS IS THE KEY FIX FOR HEIGHT & OVERLAP *** */
+    color: #333;
+}
+
+/* Fix for placeholder text visibility in date/file inputs */
+.form-group input[type="date"],
+.form-group input[type="file"] {
+    line-height: 22px; /* Vertically centers the text inside the input */
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #A855F7;
+    box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+}
+
+.purpose-group .radio-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 10px; /* Add some space for alignment */
+}
+.purpose-group .radio-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* This targets the submit button specifically */
+.contact-form .btn {
+    width: 100%;
+    /* The default padding from .btn is now correctly applied, no .btn-large needed */
+}
+
 /* ======================= RESPONSIVE STYLES (TABLET & MOBILE) (CORRECTED) ======================= */
 /* This should be outside and before your @media query */
 
@@ -803,6 +2259,67 @@ footer {
         text-align: left; /* Ensure text within columns remains left-aligned */
         min-width: 220px; /* Give columns a bit more space */
     }
+
+    /* --- Responsive Speaker Intro --- */
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .intro-image {
+        width: 80%;
+        max-width: 400px;
+        margin-top: 40px;
+    }
+
+    /* --- Responsive About Intro & Impact Sections (Corrected) --- */
+    #about-intro .intro-container,
+    .impact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* New styles for the revised intro layout */
+    #about-intro .intro-heading {
+        margin-bottom: 30px;
+    }
+
+    #about-intro .intro-stats {
+        justify-content: center;
+    }
+
+    /* Kept the original styles for the impact section */
+    .impact-image {
+        margin-top: 40px;
+        order: -1; /* Move image to the top on mobile */
+    }
+
+    /* --- Responsive Blog Intro --- */
+    #blog-intro .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    #blog-intro .intro-text {
+        margin-bottom: 40px;
+    }
+
+    /* --- Responsive Contact Page --- */
+    .quote-box {
+        position: static;
+        margin: 0 auto 30px;
+    }
+
+    #contact-details .container {
+        margin-top: 50px;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr; /* Stack form fields */
+    }
 }
 
 /* ======================= RESPONSIVE STYLES (MOBILE) ======================= */
@@ -916,4 +2433,11 @@ footer {
 
 .speakers-swiper {
     padding-bottom: 50px; /* Adds space at the bottom for the pagination dots */
+}
+
+/* This new rule targets the container for the dots */
+.speakers-swiper .swiper-pagination {
+    position: static; /* Ensures it sits in the flow of the document */
+    margin-top: 2rem; /* Adds space between the slides and the dots */
+    padding-bottom: 1rem; /* Adds a little space below the dots */
 }
