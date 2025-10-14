@@ -2110,6 +2110,359 @@ footer {
     /* The default padding from .btn is now correctly applied, no .btn-large needed */
 }
 
+/* ======================= REGISTRATION PAGE ======================= */
+#registration-page {
+    background-color: #f7f5ff;
+    padding: 100px 5%;
+}
+
+#registration-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* --- Left Side Chooser --- */
+.registration-chooser {
+    flex-basis: 300px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px; /* Sticks below the header */
+}
+
+.registration-chooser h2 {
+    color: #0C011E;
+    margin-bottom: 20px;
+}
+
+.chooser-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chooser-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border: 2px solid transparent;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.chooser-btn i {
+    font-size: 1.2rem;
+    width: 25px;
+    color: #A855F7;
+}
+
+.chooser-btn:hover {
+    border-color: #A855F7;
+    color: #0C011E;
+}
+
+.chooser-btn.active {
+    background-color: #A855F7;
+    color: #ffffff;
+    border-color: #A855F7;
+}
+.chooser-btn.active i {
+    color: #ffffff;
+}
+
+/* --- Right Side Forms --- */
+.registration-forms {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.registration-form {
+    display: none; /* Hidden by default */
+}
+
+.registration-form.active {
+    display: block; /* Shown when active */
+}
+
+.registration-form h3 {
+    color: #0C011E;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* ======================= OBJECTIVE STATEMENT PAGE ======================= */
+#objective-intro {
+    background-color: #0C011E;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+#objective-intro h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+#objective-intro h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+#objective-content {
+    background-color: #f7f5ff;
+    padding: 100px 5%;
+    color: #0C011E;
+}
+
+#objective-content .container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+#objective-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#objective-content p {
+    margin-bottom: 1.5rem;
+}
+
+#objective-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#objective-content ul li {
+    position: relative;
+    padding-left: 30px; /* Space for the icon */
+    margin-bottom: 1rem;
+}
+
+#objective-content ul li::before {
+    content: '✔'; /* You can use other icons like →, •, etc. */
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: #34D399; /* Green tick color */
+    font-weight: bold;
+}
+
+/* ======================= TERMS AND CONDITIONS PAGE ======================= */
+#terms-intro {
+    background-color: #0C011E;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+#terms-intro h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+#terms-intro h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+#terms-content {
+    background-color: #f7f5ff;
+    padding: 100px 5%;
+    color: #0C011E;
+}
+
+#terms-content .container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+#terms-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#terms-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#terms-content p {
+    margin-bottom: 1rem;
+}
+
+#terms-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#terms-content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0.8rem;
+}
+
+#terms-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #A855F7; /* Purple bullet point */
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* ======================= PRIVACY POLICY PAGE ======================= */
+#privacy-intro {
+    background-color: #0C011E;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+#privacy-intro h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+#privacy-intro h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+#privacy-content {
+    background-color: #f7f5ff;
+    padding: 100px 5%;
+    color: #0C011E;
+}
+
+#privacy-content .container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+#privacy-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#privacy-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#privacy-content p {
+    margin-bottom: 1rem;
+}
+
+#privacy-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#privacy-content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0.8rem;
+}
+
+#privacy-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #A855F7; /* Purple bullet point */
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* ======================= DISCLAIMER PAGE ======================= */
+#disclaimer-intro {
+    background-color: #0C011E;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+#disclaimer-intro h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+#disclaimer-intro h1:hover .intro-highlight::after {
+    transform: scaleX(1);
+}
+
+#disclaimer-content {
+    background-color: #f7f5ff;
+    padding: 100px 5%;
+    color: #0C011E;
+}
+
+#disclaimer-content .container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+#disclaimer-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#disclaimer-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#disclaimer-content p {
+    margin-bottom: 1rem;
+}
+
+#disclaimer-content .signature {
+    margin-top: 3rem;
+    font-style: italic;
+}
+
+
+
 /* ======================= RESPONSIVE STYLES (TABLET & MOBILE) (CORRECTED) ======================= */
 /* This should be outside and before your @media query */
 

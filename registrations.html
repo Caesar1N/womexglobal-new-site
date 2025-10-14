@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womex Global | schedule</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/d7df573266.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./images/2025/04/logo.jpeg" alt="Afrienextradel Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="speakers.html">SPEAKERS</a></li>
+                <li><a href="sponsor.html">SPONSORSHIP</a></li>
+                <li><a href="delegate.html">DELEGATE</a></li>
+                <li><a href="booth-sizes.html">BOOTH</a></li>
+                <li><a href="schedule.html">SCHEDULE</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blogs.html">BLOGS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="#" class="btn btn-primary">MY ACCOUNT</a>
+            <button id="menu-toggle" class="menu-toggle-btn">
+            <i class="fas fa-bars"></i> </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="registration-page">
+            <div class="container">
+                <div class="registration-chooser">
+                    <h2>I'm registering as:</h2>
+                    <div class="chooser-options">
+                        <button class="chooser-btn active" data-form="visitor-form">
+                            <i class="fas fa-user"></i> Visitor
+                        </button>
+                        <button class="chooser-btn" data-form="delegate-form">
+                            <i class="fas fa-users"></i> Delegate
+                        </button>
+                        <button class="chooser-btn" data-form="exhibitor-form">
+                            <i class="fas fa-store"></i> Exhibitor
+                        </button>
+                        <button class="chooser-btn" data-form="sponsor-form">
+                            <i class="fas fa-gem"></i> Sponsor
+                        </button>
+                    </div>
+                </div>
+
+                <div class="registration-forms">
+                    <form id="visitor-form" class="registration-form active">
+                        <h3>Visitor Registration</h3>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="vis-first-name">First Name</label><input type="text" id="vis-first-name" required></div>
+                            <div class="form-group"><label for="vis-last-name">Last Name</label><input type="text" id="vis-last-name" required></div>
+                            <div class="form-group"><label for="vis-email">Email Address</label><input type="email" id="vis-email" required></div>
+                            <div class="form-group"><label for="vis-tel">Telephone</label><input type="tel" id="vis-tel" required></div>
+                            <div class="form-group full-width"><label for="vis-how-heard">How did you hear about us?</label><select id="vis-how-heard"><option>Friend/Colleague</option><option>Radio/TV</option><option>Social Media</option><option>Other</option></select></div>
+                            <div class="form-group full-width"><label for="vis-bio">Short Bio</label><textarea id="vis-bio" rows="4"></textarea></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register as Visitor</button>
+                    </form>
+
+                    <form id="delegate-form" class="registration-form">
+                        <h3>Delegate Registration</h3>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="del-company-name">Company Name</label><input type="text" id="del-company-name" required></div>
+                            <div class="form-group"><label for="del-department">Department</label><input type="text" id="del-department"></div>
+                            <div class="form-group full-width"><label for="del-industry">Industry/Sector</label><input type="text" id="del-industry" required></div>
+                            <div class="form-group"><label for="del-full-name">Full Name</label><input type="text" id="del-full-name" required></div>
+                            <div class="form-group"><label for="del-email">Business Email</label><input type="email" id="del-email" required></div>
+                            <div class="form-group"><label for="del-phone">Phone Number</label><input type="tel" id="del-phone" required></div>
+                            <div class="form-group"><label for="del-address">Address</label><input type="text" id="del-address"></div>
+                            <div class="form-group"><label for="del-job-role">Job Role</label><select id="del-job-role"><option>Decision Maker</option><option>Influencer</option><option>Non-Decision Maker</option></select></div>
+                            <div class="form-group"><label for="del-designation">Designation</label><input type="text" id="del-designation"></div>
+                            <div class="form-group full-width"><label for="del-website">Company Website</label><input type="url" id="del-website"></div>
+                            <div class="form-group full-width"><label for="del-message">Your Message (Optional)</label><textarea id="del-message" rows="4"></textarea></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register as Delegate</button>
+                    </form>
+
+                    <form id="sponsor-form" class="registration-form">
+                        <h3>Sponsor Registration</h3>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="spon-company-name">Company Name</label><input type="text" id="spon-company-name" required></div>
+                            <div class="form-group"><label for="spon-website">Website</label><input type="url" id="spon-website"></div>
+                            <div class="form-group"><label for="spon-full-name">Full Name</label><input type="text" id="spon-full-name" required></div>
+                            <div class="form-group"><label for="spon-job-title">Job Title</label><input type="text" id="spon-job-title"></div>
+                            <div class="form-group"><label for="spon-department">Department</label><input type="text" id="spon-department"></div>
+                            <div class="form-group"><label for="spon-email">Business Email</label><input type="email" id="spon-email" required></div>
+                            <div class="form-group"><label for="spon-phone">Phone Number</label><input type="tel" id="spon-phone" required></div>
+                            <div class="form-group"><label for="spon-address">Company Address</label><input type="text" id="spon-address"></div>
+                            <div class="form-group"><label for="spon-budget">Sponsorship Budget</label><input type="text" id="spon-budget"></div>
+                            <div class="form-group"><label for="spon-resources">Required Resources</label><select id="spon-resources"><option>Schedule a Call</option><option>Request Calendar</option><option>Request Brochure</option><option>Request Packages</option></select></div>
+                            <div class="form-group full-width"><label for="spon-message">Your Message (Optional)</label><textarea id="spon-message" rows="4"></textarea></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register as Sponsor</button>
+                    </form>
+
+                    <form id="exhibitor-form" class="registration-form">
+                        <h3>Exhibitor Registration</h3>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="exh-full-name">Full Name</label><input type="text" id="exh-full-name" required></div>
+                            <div class="form-group"><label for="exh-company-name">Company Name</label><input type="text" id="exh-company-name" required></div>
+                            <div class="form-group"><label for="exh-designation">Designation</label><input type="text" id="exh-designation"></div>
+                            <div class="form-group"><label for="exh-email">Business Email</label><input type="email" id="exh-email" required></div>
+                            <div class="form-group"><label for="exh-how-heard">How did you hear about us?</label><select id="exh-how-heard"><option>Social Media</option><option>Email</option><option>Radio/TV</option><option>Friend/Colleague</option><option>Other</option></select></div>
+                            <div class="form-group"><label for="exh-address">Address</label><input type="text" id="exh-address"></div>
+                            <div class="form-group"><label for="exh-phone">Phone Number</label><input type="tel" id="exh-phone" required></div>
+                            <div class="form-group"><label for="exh-space">Space Required</label><select id="exh-space"><option>2m x 2m</option><option>2m x 3m</option><option>3m x 3m</option><option>3m x 4m</option><option>3m x 6m</option><option>4m x 6m</option><option>5m x 6m</option><option>6m x 6m</option></select></div>
+                            <div class="form-group full-width"><label for="exh-message">Your Message (Optional)</label><textarea id="exh-message" rows="4"></textarea></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register as Exhibitor</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-row-container footer-content">
+            <div class="footer-about">
+                <img src="./images/2025/04/Untitled-1.png" alt="Footer Logo">
+                <p>Events and conferences are hubs of learning, innovation, and collaboration.</p>
+            </div>
+            <div class="footer-subscribe">
+                <h3>SUBSCRIBE OUR NEWSLETTER</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-row-container footer-links">
+            <div class="links-column">
+                <h4>MENU</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="sponsor.html">Sponsorship</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h4>USEFUL LINKS</h4>
+                <ul>
+                    <li><a href="#">Objective Statement</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h4>FOLLOW US</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h4>CONTACT US</h4>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <span>Email</span>
+                        <a href="mailto:support@womexglobal.com">support@womexglobal.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <span>Phone</span>
+                        <a href="tel:+2348039848693">+234 803 984 8693</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-row-container footer-bottom">
+            <div class="footer-brand">
+                <p>Womex Global</p>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const menuToggleBtn = document.querySelector('.menu-toggle-btn');
+        const nav = document.querySelector('header nav');
+
+        menuToggleBtn.addEventListener('click', () => {
+            nav.classList.toggle('menu-open');
+        });
+
+        // --- Registration Form Chooser ---
+        const chooserButtons = document.querySelectorAll('.chooser-btn');
+        const registrationForms = document.querySelectorAll('.registration-form');
+
+        chooserButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetFormId = button.getAttribute('data-form');
+
+                // Update active button
+                chooserButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Show the target form and hide others
+                registrationForms.forEach(form => {
+                    if (form.id === targetFormId) {
+                        form.classList.add('active');
+                    } else {
+                        form.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
