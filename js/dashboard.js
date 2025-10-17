@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 payNowBtn.disabled = true;
 
                 try {
-                    const initResponse = await fetch(' https://womex-global-api-423358063719.us-central1.run.app/api/payments/initialize', {
+                    const initResponse = await fetch('/api/payments/initialize', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -97,11 +97,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const initData = await initResponse.json();
 
                     if (!initResponse.ok) {
-                        throw new Error(initData.message || 'Could not start payment.');
+                        throw new Error(initData.message || 'Could not process registration.');
                     }
 
-                    // Redirect user to Paystack's payment page
-                    window.location.href = initData.data.authorization_url;
+                    // --- NEW LOGIC ---
+                    // Check if the registration was free and completed by the backend
+                    if (initData.data && initData.data.is_free) {
+                        // Registration was free, simply reload the page to show the 'completed' status
+                        window.location.reload();
+                    } else if (initData.data && initData.data.authorization_url) {
+                        // It's a paid registration, redirect to Paystack
+                        window.location.href = initData.data.authorization_url;
+                    } else {
+                        // Handle any other unexpected success response
+                        throw new Error('An unexpected error occurred. Please try again.');
+                    }
+                    // --- END NEW LOGIC ---
 
                 } catch (error) {
                     paymentError.textContent = error.message;

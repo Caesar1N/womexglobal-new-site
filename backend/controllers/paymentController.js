@@ -57,9 +57,14 @@ const initializePayment = async (req, res) => {
         }
 
         // If the registration is free (like for a Visitor), we can just update the status and finish.
-        if (amount === 0) {
+        if (amount <= 0) {
              await Registration.findByIdAndUpdate(registrationId, { paymentStatus: 'completed' });
-             return res.status(200).json({ status: 'success', message: 'Registration is free and has been completed.' });
+             // Send a specific response for free registrations
+             return res.status(200).json({
+                 status: true,
+                 message: 'Registration is free and has been completed.',
+                 data: { is_free: true } // This is the key for the frontend
+             });
         }
         
         // --- END OF NEW PRICING LOGIC ---
