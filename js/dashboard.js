@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // --- 3. Fetch Registration Data ---
     try {
-        const response = await fetch('/api/users/me/registrations', {
+        const response = await fetch(' https://womex-global-api-423358063719.us-central1.run.app/api/users/me/registrations', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 payNowBtn.disabled = true;
 
                 try {
-                    const initResponse = await fetch('/api/payments/initialize', {
+                    const initResponse = await fetch(' https://womex-global-api-423358063719.us-central1.run.app/api/payments/initialize', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

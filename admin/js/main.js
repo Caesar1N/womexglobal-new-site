@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const API_BASE_URL = '/api/admin';
+    const API_BASE_URL = ' https://womex-global-api-423358063719.us-central1.run.app/api/admin';
 
     const headers = {
         'Content-Type': 'application/json',

@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // --- Send Data to Backend ---
             try {
-                const response = await fetch('/api/auth/register-and-submit', {
+                const response = await fetch(' https://womex-global-api-423358063719.us-central1.run.app/api/auth/register-and-submit', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(apiPayload),
