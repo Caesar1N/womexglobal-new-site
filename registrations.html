@@ -23,7 +23,7 @@
                 <li><a href="speakers.html">SPEAKERS</a></li>
                 <li><a href="sponsor.html">SPONSORSHIP</a></li>
                 <li><a href="delegate.html">DELEGATE</a></li>
-                <li><a href="booth-sizes.html">BOOTH</a></li>
+                <li><a href="exhibit.html">EXHIBIT</a></li>
                 <li><a href="schedule.html">SCHEDULE</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="blogs.html">BLOGS</a></li>
@@ -59,15 +59,19 @@
                 </div>
 
                 <div class="registration-forms">
+                    <p id="general-error" class="error-message" style="display:none;"></p>
+
                     <form id="visitor-form" class="registration-form active">
                         <h3>Visitor Registration</h3>
                         <div class="form-grid">
-                            <div class="form-group"><label for="vis-first-name">First Name</label><input type="text" id="vis-first-name" required></div>
-                            <div class="form-group"><label for="vis-last-name">Last Name</label><input type="text" id="vis-last-name" required></div>
-                            <div class="form-group"><label for="vis-email">Email Address</label><input type="email" id="vis-email" required></div>
-                            <div class="form-group"><label for="vis-tel">Telephone</label><input type="tel" id="vis-tel" required></div>
-                            <div class="form-group full-width"><label for="vis-how-heard">How did you hear about us?</label><select id="vis-how-heard"><option>Friend/Colleague</option><option>Radio/TV</option><option>Social Media</option><option>Other</option></select></div>
-                            <div class="form-group full-width"><label for="vis-bio">Short Bio</label><textarea id="vis-bio" rows="4"></textarea></div>
+                            <div class="form-group"><label for="vis-firstName">First Name</label><input type="text" id="vis-firstName" name="firstName" required></div>
+                            <div class="form-group"><label for="vis-lastName">Last Name</label><input type="text" id="vis-lastName" name="lastName" required></div>
+                            <div class="form-group"><label for="vis-email">Email Address</label><input type="email" id="vis-email" name="email" required></div>
+                            <div class="form-group"><label for="vis-tel">Telephone</label><input type="tel" id="vis-tel" name="tel" required></div>
+                            <div class="form-group"><label for="vis-password">Password</label><input type="password" id="vis-password" name="password" required></div>
+                            <div class="form-group"><label for="vis-confirmPassword">Confirm Password</label><input type="password" id="vis-confirmPassword" name="confirmPassword" required></div>
+                            <div class="form-group full-width"><label for="vis-howHeard">How did you hear about us?</label><select id="vis-howHeard" name="howHeard"><option>Friend/Colleague</option><option>Radio/TV</option><option>Social Media</option><option>Other</option></select></div>
+                            <div class="form-group full-width"><label for="vis-bio">Short Bio</label><textarea id="vis-bio" name="bio" rows="4"></textarea></div>
                         </div>
                         <button type="submit" class="btn btn-primary">Register as Visitor</button>
                     </form>
@@ -75,17 +79,19 @@
                     <form id="delegate-form" class="registration-form">
                         <h3>Delegate Registration</h3>
                         <div class="form-grid">
-                            <div class="form-group"><label for="del-company-name">Company Name</label><input type="text" id="del-company-name" required></div>
-                            <div class="form-group"><label for="del-department">Department</label><input type="text" id="del-department"></div>
-                            <div class="form-group full-width"><label for="del-industry">Industry/Sector</label><input type="text" id="del-industry" required></div>
-                            <div class="form-group"><label for="del-full-name">Full Name</label><input type="text" id="del-full-name" required></div>
-                            <div class="form-group"><label for="del-email">Business Email</label><input type="email" id="del-email" required></div>
-                            <div class="form-group"><label for="del-phone">Phone Number</label><input type="tel" id="del-phone" required></div>
-                            <div class="form-group"><label for="del-address">Address</label><input type="text" id="del-address"></div>
-                            <div class="form-group"><label for="del-job-role">Job Role</label><select id="del-job-role"><option>Decision Maker</option><option>Influencer</option><option>Non-Decision Maker</option></select></div>
-                            <div class="form-group"><label for="del-designation">Designation</label><input type="text" id="del-designation"></div>
-                            <div class="form-group full-width"><label for="del-website">Company Website</label><input type="url" id="del-website"></div>
-                            <div class="form-group full-width"><label for="del-message">Your Message (Optional)</label><textarea id="del-message" rows="4"></textarea></div>
+                            <div class="form-group"><label for="del-fullName">Full Name</label><input type="text" id="del-fullName" name="fullName" required></div>
+                            <div class="form-group"><label for="del-email">Business Email</label><input type="email" id="del-email" name="email" required></div>
+                            <div class="form-group"><label for="del-password">Password</label><input type="password" id="del-password" name="password" required></div>
+                            <div class="form-group"><label for="del-confirmPassword">Confirm Password</label><input type="password" id="del-confirmPassword" name="confirmPassword" required></div>
+                            <div class="form-group"><label for="del-companyName">Company Name</label><input type="text" id="del-companyName" name="companyName" required></div>
+                            <div class="form-group"><label for="del-department">Department</label><input type="text" id="del-department" name="department"></div>
+                            <div class="form-group full-width"><label for="del-industry">Industry/Sector</label><input type="text" id="del-industry" name="industry" required></div>
+                            <div class="form-group"><label for="del-phone">Phone Number</label><input type="tel" id="del-phone" name="phone" required></div>
+                            <div class="form-group"><label for="del-address">Address</label><input type="text" id="del-address" name="address"></div>
+                            <div class="form-group"><label for="del-jobRole">Job Role</label><select id="del-jobRole" name="jobRole"><option>Decision Maker</option><option>Influencer</option><option>Non-Decision Maker</option></select></div>
+                            <div class="form-group"><label for="del-designation">Designation</label><input type="text" id="del-designation" name="designation"></div>
+                            <div class="form-group full-width"><label for="del-website">Company Website</label><input type="url" id="del-website" name="website"></div>
+                            <div class="form-group full-width"><label for="del-message">Your Message (Optional)</label><textarea id="del-message" name="message" rows="4"></textarea></div>
                         </div>
                         <button type="submit" class="btn btn-primary">Register as Delegate</button>
                     </form>
@@ -93,17 +99,19 @@
                     <form id="sponsor-form" class="registration-form">
                         <h3>Sponsor Registration</h3>
                         <div class="form-grid">
-                            <div class="form-group"><label for="spon-company-name">Company Name</label><input type="text" id="spon-company-name" required></div>
-                            <div class="form-group"><label for="spon-website">Website</label><input type="url" id="spon-website"></div>
-                            <div class="form-group"><label for="spon-full-name">Full Name</label><input type="text" id="spon-full-name" required></div>
-                            <div class="form-group"><label for="spon-job-title">Job Title</label><input type="text" id="spon-job-title"></div>
-                            <div class="form-group"><label for="spon-department">Department</label><input type="text" id="spon-department"></div>
-                            <div class="form-group"><label for="spon-email">Business Email</label><input type="email" id="spon-email" required></div>
-                            <div class="form-group"><label for="spon-phone">Phone Number</label><input type="tel" id="spon-phone" required></div>
-                            <div class="form-group"><label for="spon-address">Company Address</label><input type="text" id="spon-address"></div>
-                            <div class="form-group"><label for="spon-budget">Sponsorship Budget</label><input type="text" id="spon-budget"></div>
-                            <div class="form-group"><label for="spon-resources">Required Resources</label><select id="spon-resources"><option>Schedule a Call</option><option>Request Calendar</option><option>Request Brochure</option><option>Request Packages</option></select></div>
-                            <div class="form-group full-width"><label for="spon-message">Your Message (Optional)</label><textarea id="spon-message" rows="4"></textarea></div>
+                            <div class="form-group"><label for="spon-fullName">Full Name</label><input type="text" id="spon-fullName" name="fullName" required></div>
+                            <div class="form-group"><label for="spon-email">Business Email</label><input type="email" id="spon-email" name="email" required></div>
+                            <div class="form-group"><label for="spon-password">Password</label><input type="password" id="spon-password" name="password" required></div>
+                            <div class="form-group"><label for="spon-confirmPassword">Confirm Password</label><input type="password" id="spon-confirmPassword" name="confirmPassword" required></div>
+                            <div class="form-group"><label for="spon-companyName">Company Name</label><input type="text" id="spon-companyName" name="companyName" required></div>
+                            <div class="form-group"><label for="spon-website">Website</label><input type="url" id="spon-website" name="website"></div>
+                            <div class="form-group"><label for="spon-jobTitle">Job Title</label><input type="text" id="spon-jobTitle" name="jobTitle"></div>
+                            <div class="form-group"><label for="spon-department">Department</label><input type="text" id="spon-department" name="department"></div>
+                            <div class="form-group"><label for="spon-phone">Phone Number</label><input type="tel" id="spon-phone" name="phone" required></div>
+                            <div class="form-group"><label for="spon-address">Company Address</label><input type="text" id="spon-address" name="address"></div>
+                            <div class="form-group"><label for="spon-budget">Sponsorship Budget</label><input type="text" id="spon-budget" name="budget"></div>
+                            <div class="form-group"><label for="spon-resources">Required Resources</label><select id="spon-resources" name="resources"><option>Schedule a Call</option><option>Request Calendar</option><option>Request Brochure</option><option>Request Packages</option></select></div>
+                            <div class="form-group full-width"><label for="spon-message">Your Message (Optional)</label><textarea id="spon-message" name="message" rows="4"></textarea></div>
                         </div>
                         <button type="submit" class="btn btn-primary">Register as Sponsor</button>
                     </form>
@@ -111,15 +119,17 @@
                     <form id="exhibitor-form" class="registration-form">
                         <h3>Exhibitor Registration</h3>
                         <div class="form-grid">
-                            <div class="form-group"><label for="exh-full-name">Full Name</label><input type="text" id="exh-full-name" required></div>
-                            <div class="form-group"><label for="exh-company-name">Company Name</label><input type="text" id="exh-company-name" required></div>
-                            <div class="form-group"><label for="exh-designation">Designation</label><input type="text" id="exh-designation"></div>
-                            <div class="form-group"><label for="exh-email">Business Email</label><input type="email" id="exh-email" required></div>
-                            <div class="form-group"><label for="exh-how-heard">How did you hear about us?</label><select id="exh-how-heard"><option>Social Media</option><option>Email</option><option>Radio/TV</option><option>Friend/Colleague</option><option>Other</option></select></div>
-                            <div class="form-group"><label for="exh-address">Address</label><input type="text" id="exh-address"></div>
-                            <div class="form-group"><label for="exh-phone">Phone Number</label><input type="tel" id="exh-phone" required></div>
-                            <div class="form-group"><label for="exh-space">Space Required</label><select id="exh-space"><option>2m x 2m</option><option>2m x 3m</option><option>3m x 3m</option><option>3m x 4m</option><option>3m x 6m</option><option>4m x 6m</option><option>5m x 6m</option><option>6m x 6m</option></select></div>
-                            <div class="form-group full-width"><label for="exh-message">Your Message (Optional)</label><textarea id="exh-message" rows="4"></textarea></div>
+                            <div class="form-group"><label for="exh-fullName">Full Name</label><input type="text" id="exh-fullName" name="fullName" required></div>
+                            <div class="form-group"><label for="exh-email">Business Email</label><input type="email" id="exh-email" name="email" required></div>
+                            <div class="form-group"><label for="exh-password">Password</label><input type="password" id="exh-password" name="password" required></div>
+                            <div class="form-group"><label for="exh-confirmPassword">Confirm Password</label><input type="password" id="exh-confirmPassword" name="confirmPassword" required></div>
+                            <div class="form-group"><label for="exh-companyName">Company Name</label><input type="text" id="exh-companyName" name="companyName" required></div>
+                            <div class="form-group"><label for="exh-designation">Designation</label><input type="text" id="exh-designation" name="designation"></div>
+                            <div class="form-group"><label for="exh-howHeard">How did you hear about us?</label><select id="exh-howHeard" name="howHeard"><option>Social Media</option><option>Email</option><option>Radio/TV</option><option>Friend/Colleague</option><option>Other</option></select></div>
+                            <div class="form-group"><label for="exh-address">Address</label><input type="text" id="exh-address" name="address"></div>
+                            <div class="form-group"><label for="exh-phone">Phone Number</label><input type="tel" id="exh-phone" name="phone" required></div>
+                            <div class="form-group"><label for="exh-space">Space Required</label><select id="exh-space" name="space"><option>2m x 2m</option><option>2m x 3m</option><option>3m x 3m</option><option>3m x 4m</option><option>3m x 6m</option><option>4m x 6m</option><option>5m x 6m</option><option>6m x 6m</option></select></div>
+                            <div class="form-group full-width"><label for="exh-message">Your Message (Optional)</label><textarea id="exh-message" name="message" rows="4"></textarea></div>
                         </div>
                         <button type="submit" class="btn btn-primary">Register as Exhibitor</button>
                     </form>
@@ -156,20 +166,20 @@
             <div class="links-column">
                 <h4>USEFUL LINKS</h4>
                 <ul>
-                    <li><a href="#">Objective Statement</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="objective-statement.html">Objective Statement</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </div>
             <div class="links-column">
                 <h4>FOLLOW US</h4>
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
+                    <li><a href="www.facebook.com/profiIe.php?id=61581465805041">Facebook</a></li>
+                    <li><a href="x.com/AfricanEnt71988">Twitter</a></li>
                     <li><a href="#">Instagram</a></li>
-                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="www.Iinkedin.com/in/african-entrepreneur-exhibition-trade-fair-Iimited-531753353/">LinkedIn</a></li>
                 </ul>
             </div>
             <div class="links-column">
@@ -207,37 +217,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
-        // --- Mobile Menu Toggle ---
-        const menuToggleBtn = document.querySelector('.menu-toggle-btn');
-        const nav = document.querySelector('header nav');
-
-        menuToggleBtn.addEventListener('click', () => {
-            nav.classList.toggle('menu-open');
-        });
-
-        // --- Registration Form Chooser ---
-        const chooserButtons = document.querySelectorAll('.chooser-btn');
-        const registrationForms = document.querySelectorAll('.registration-form');
-
-        chooserButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const targetFormId = button.getAttribute('data-form');
-
-                // Update active button
-                chooserButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                // Show the target form and hide others
-                registrationForms.forEach(form => {
-                    if (form.id === targetFormId) {
-                        form.classList.add('active');
-                    } else {
-                        form.classList.remove('active');
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/registration.js"></script>
 </body>
 </html>

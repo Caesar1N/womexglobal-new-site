@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dashboard - Womex Global</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Simple styles for the dashboard */
+        #dashboard { padding: 100px 5%; background-color: #f7f5ff; min-height: 80vh; color: #0C011E; }
+        .dashboard-container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        .dashboard-header { border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
+        .dashboard-header h2 { font-size: 2rem; margin: 0; }
+        .dashboard-header p { font-size: 1.1rem; color: #555; }
+        .registration-details dt { font-weight: 700; margin-top: 15px; }
+        .registration-details dd { margin-left: 0; margin-bottom: 10px; color: #555; }
+        .status-pending { color: #f59e0b; font-weight: bold; }
+        .status-completed { color: #10b981; font-weight: bold; }
+        .payment-section { margin-top: 30px; padding-top: 30px; border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="images/2025/04/Logo.png" alt="Womex Global Logo"></a>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a id="logout-btn" href="#" class="btn btn-secondary">Logout</a>
+            <button class="menu-toggle-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <div id="dashboard-container" class="dashboard-container">
+                <p>Loading your details...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-row-container footer-content">
+            <div class="footer-about">
+                <img src="./images/2025/04/Untitled-1.png" alt="Footer Logo">
+                <p>Events and conferences are hubs of learning, innovation, and collaboration.</p>
+            </div>
+            <div class="footer-subscribe">
+                <h3>SUBSCRIBE OUR NEWSLETTER</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-row-container footer-links">
+            <div class="links-column">
+                <h4>MENU</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="sponsor.html">Sponsorship</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h4>USEFUL LINKS</h4>
+                <ul>
+                    <li><a href="objective-statement.html">Objective Statement</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h4>FOLLOW US</h4>
+                <ul>
+                    <li><a href="www.facebook.com/profiIe.php?id=61581465805041">Facebook</a></li>
+                    <li><a href="x.com/AfricanEnt71988">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="www.Iinkedin.com/in/african-entrepreneur-exhibition-trade-fair-Iimited-531753353/">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h4>CONTACT US</h4>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <span>Email</span>
+                        <a href="mailto:support@womexglobal.com">support@womexglobal.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <span>Phone</span>
+                        <a href="tel:+2348039848693">+234 803 984 8693</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-row-container footer-bottom">
+            <div class="footer-brand">
+                <p>Womex Global</p>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
